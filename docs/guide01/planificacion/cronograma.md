@@ -17,6 +17,6 @@ En preparación. Subiré el editable y el PDF cuando estén listos.
 [Descargar editable (.pod)](Sample2Project.pod?raw=1)
 docs/guia01/planificacion/
   Sample2Project.pod
-  export/Sample2Project.pdf
-[Ver cronograma (PDF)](export/Sample2Project.pdf) · [Editable (.pod)](Sample2Project.pod)
+  Sample2Projectlibre.pdf
+[Ver cronograma (PDF)](Sample2Projectlibre.pdf) · [Editable (.pod)](Sample2Project.pod)
 
