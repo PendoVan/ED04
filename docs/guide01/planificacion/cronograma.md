@@ -12,3 +12,13 @@ Definir actividades, dependencias y calendario del proyecto.
 
 ## Estado
 En preparación. Subiré el editable y el PDF cuando estén listos.
+
+## Cronograma en formato Project Libre
+[Descargar editable (.pod)](Sample2 Project.pod)
+docs/guia01/planificacion/
+  Sample2 Project.pod
+  export/Sample2 Project.pdf
+
+[Ver cronograma (PDF)](export/Sample2 Project.pdf) · [Editable (.pod)](Sample2 Project.pod)
+
+
