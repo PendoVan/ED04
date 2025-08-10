@@ -1,12 +1,8 @@
 # Guía 01 — GUIA DE APRENDIZAJE PARA LA PLANIFICACIÓN DE UN PROYECTO DE SOFTWARE
 
-Breve descripción de la "GUIA DE APRENDIZAJE PARA LA PLANIFICACIÓN DE UN PROYECTO DE SOFTWARE".
+Esta guia se divide en dos secciones:
 
 ## Contenido
-- Introducción
 - Especificación de requisitos de software
-- Requisitos funcionales
-- Requisitos no funcionales
-- Requisitos que no generan valor a la organización
-- Validación de los requisitos
+- Planificacion del proyecto
   
