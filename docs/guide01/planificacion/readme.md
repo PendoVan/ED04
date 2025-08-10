@@ -1,9 +1,9 @@
 # Planificación del proyecto
-- Alcance
-- WBS
-- Cronograma
-- Estimación
-- Riesgos
-- Comunicaciones
-- Calidad
-- Gestión de configuración
+- [Alcance (In/Out)](alcance.md)
+- [WBS](wbs.md)
+- [Cronograma](cronograma.md)
+- [Estimación](estimacion.md)
+- [Riesgos](riesgos.md)
+- [Comunicaciones](comunicaciones.md)
+- [Calidad (V&V)](calidad.md)
+- [Gestión de configuración](configuracion.md)
