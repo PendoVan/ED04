@@ -20,3 +20,6 @@ docs/guia01/planificacion/
   Sample2Projectlibre.pdf
 [Ver cronograma (PDF)](Sample2Projectlibre.pdf) · [Editable (.pod)](Sample2Project.pod)
 
+> **Descarga:** haga clic derecho en “Editable (.pod)” y elija **Guardar enlace como…**.
+> **Nota:** si ve “error loading page”, haga clic derecho y pruebe **Abrir enlace en una pestaña nueva**
+> o “Guardar enlace como…”.
