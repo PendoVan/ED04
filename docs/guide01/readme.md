@@ -3,6 +3,6 @@
 Esta guia se divide en dos secciones:
 
 ## Contenido
-- Especificación de requisitos de software
-- Planificacion del proyecto
+- Fase 01: Especificación de requisitos de software
+- Fase 02: Planificacion del proyecto
   
