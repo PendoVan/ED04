@@ -19,7 +19,7 @@ Allí encontrarás la primera guía que debes completar.
 
 ## 📂 Guías disponibles
 
-- **[Guía 01 — Guía de aprendizaje para la planificación de un proyecto de SW](docs/guide01/README.md)**  
+- **[Guía 01 — Guía de aprendizaje para la planificación de un proyecto de SW](docs/guide01)**  
 - (Más adelante) **Guía 02 — Guía de aprendizaje para el diseño e implementación del proyecto de SW**
 
 ---
