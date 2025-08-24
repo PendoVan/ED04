@@ -1,9 +1,7 @@
-# Planificación del proyecto
-- [Alcance (In/Out)](alcance.md)
-- [WBS](wbs.md)
-- [Cronograma](cronograma.md)
-- [Estimación](estimacion.md)
+# Fase 02: Planificación del proyecto de software
+- [Introducción](introduccion.md)
+- [Organización del proyecto](organizacion.md)
+- [Requisitos de hardware y software](hwsw.md)
+- [Desglose del trabajo](desglose.md)
 - [Riesgos](riesgos.md)
-- [Comunicaciones](comunicaciones.md)
-- [Calidad (V&V)](calidad.md)
-- [Gestión de configuración](configuracion.md)
+- [Cronograma del proyecto](cronograma.md)
