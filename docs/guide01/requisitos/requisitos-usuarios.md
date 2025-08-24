@@ -1,8 +1,8 @@
 # Requisitos de usuario
 Los requisitos del usuario se expresan en lenguaje natural. Los cuales han sido obtenidos mediante las técnicas de obtención de requisitos descritas en el Anexo A - “Técnicas de obtención de requisitos de software”. Puede incluir:
--**Ámbito funcional que deberá soportar el software por cada parte interesada**. Por ejemplo, el área del cliente donde se encuentran los procesos que se necesitan automatizar:
+- Ámbito funcional que deberá soportar el software por cada parte interesada. Por ejemplo, el área del cliente donde se encuentran los procesos que se necesitan automatizar:
 Compras, Ventas, Atención al cliente, Admisión de estudiantes, Inventario, etc.
--**La descripción del diseño de las funciones más importantes que se tiene previsto realice el sistema de información**.
+- La descripción del diseño de las funciones más importantes que se tiene previsto realice el sistema de información.
 
 ## Anexo A: Técnicas de obtención de requisitos de software
 Documentar las técnicas que utilizaron para realizar la obtención de requisitos del software: Entrevistas, Encuestas, Cuestionarios, Análisis de tareas, Análisis del dominio, 
