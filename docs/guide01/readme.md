@@ -55,7 +55,7 @@ o usa el botón **Download ZIP** en GitHub.
 
 ## Entrega Final
 
-La **primera versión oficial** de esta guía debe estar lista como máximo el **15 de septiembre (semana 05 del curso)**.  
+La **primera versión oficial** de esta guía debe estar lista como máximo el **22 de septiembre (semana 06 del curso)**.  
 
 Para la entrega se requiere:  
 - Subir el repositorio actualizado a GitHub con todos los archivos completados hasta esa fecha.  
