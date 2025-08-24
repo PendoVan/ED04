@@ -17,13 +17,18 @@ En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de des
 - **Fase 01 — Especificación de requisitos de software**
   - `README.md`: instrucciones y lineamientos de la fase
   - `requisitos-usuario.md`: plantilla para capturar requisitos en lenguaje natural
+  - `categorizacion.md`
+  - `negociacion.md`
+  - `rtm.md`: Requisitos Técnicos Mínimos del proyecto de prototipo de software
+  - `validacion.md`
 - **Fase 02 — Planificación del proyecto de software**
   - `README.md`: instrucciones de la fase
-  - `organizacion-proyecto.md`
+  - `introduccion.md`
+  - `organizacion-proyecto.md`: Ejemplo de miembros y roles del equipo
   - `hw-sw.md`
-  - `desglose-trabajo.md`
-  - `riesgos.md`
-  - `cronograma.pod`: ejemplo de cronograma en ProjectLibre
+  - `desglose-trabajo.md`: Ejemplo de desglose de tareas
+  - `riesgos.md`: Ejemplo de tabla de riesgos
+  - `cronograma.pod`: Ejemplo de cronograma en ProjectLibre
 
 ---
 
