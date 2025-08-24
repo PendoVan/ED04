@@ -51,6 +51,19 @@ o usa el botón **Download ZIP** en GitHub.
 4. **Cronograma**:  
    - Abre el archivo `cronograma.pod` con **ProjectLibre**.  
    - Adapta las tareas, fechas y dependencias a tu proyecto.  
-   - Exporta también una **versión en PDF o imagen** del diagrama de Gantt.  
+   - Exporta también una **versión en PDF o imagen** del diagrama de Gantt.
+
+## Entrega Final
+
+La **primera versión oficial** de esta guía debe estar lista como máximo el **15 de septiembre (semana 05 del curso)**.  
+
+Para la entrega se requiere:  
+- Subir el repositorio actualizado a GitHub con todos los archivos completados hasta esa fecha.  
+- Compartir el enlace del repositorio con la docente.  
+
+> ⚠️ Nota: En esta primera entrega **no es obligatorio** el uso de Git en consola ni control de versiones avanzado.  
+> Los equipos pueden trabajar directamente desde la interfaz web de GitHub (subiendo y editando archivos en línea).  
+> El uso de Git como herramienta de control de versiones se introducirá en una etapa posterior del curso.
+
 
   
