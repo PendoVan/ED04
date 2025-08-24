@@ -38,20 +38,19 @@ En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de des
    ```bash
    git clone <url-del-repo>
 
-o usa el botón Download ZIP en GitHub.
+o usa el botón **Download ZIP** en GitHub.
 
-2. Crea tu copia de trabajo:
-Cada ED debe crear un repositorio a partir de esta plantilla usando el botón Use this template en GitHub.
+2. **Crea tu copia de trabajo**:  
+   Cada **equipo de desarrollo (ED)** debe crear un repositorio a partir de esta plantilla usando el botón **Use this template** en GitHub.
 
-3. Rellena los archivos Markdown (.md):
+3. **Rellena los archivos Markdown (`.md`)**:  
+   - Usa lenguaje claro, técnico y conciso.  
+   - Completa las tablas y listas de cada fase.  
+   - Reemplaza los textos en *cursiva* con la información de tu equipo.  
 
-- Usa lenguaje claro, técnico y conciso.
-- Completa las tablas y listas de cada fase.
-- Reemplaza los textos en cursiva con la información de tu equipo.
+4. **Cronograma**:  
+   - Abre el archivo `cronograma.pod` con **ProjectLibre**.  
+   - Adapta las tareas, fechas y dependencias a tu proyecto.  
+   - Exporta también una **versión en PDF o imagen** del diagrama de Gantt.  
 
-4. Cronograma:
-
-- Abre el archivo cronograma.pod con ProjectLibre.
-- Adapta las tareas, fechas y dependencias a tu proyecto.
-- Exporta también una versión en PDF o imagen del diagrama de Gantt.
   
