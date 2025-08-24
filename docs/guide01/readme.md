@@ -3,6 +3,18 @@
 Bienvenido/a 👋. Este repositorio contiene la **plantilla de trabajo** para la primera parte del curso de Procesos de Software.  
 Aquí encontrarás las fases, documentos y ejemplos necesarios para desarrollar la etapa de gabinete de tu proyecto.
 
+## 🚀 Instrucciones para los Equipos de Desarrollo (ED)
+
+1. Ingresa al repositorio plantilla:  
+   👉 [SW_Process_Template](https://github.com/<tuusuario>/SW_Process_Template)
+
+2. Haz clic en **Use this template → Create a new repository**.  
+   - Asigna un nombre a tu nuevo repositorio (ejemplo: `Equipo01_SW_Process`).  
+   - Cada ED debe tener **su propio repositorio**, independiente del docente y de otros equipos.
+
+3. Trabaja dentro de la carpeta:  
+
+
 ## Contenido
 Esta guia se divide en dos secciones:
 - Fase 01: Especificación de requisitos de software
