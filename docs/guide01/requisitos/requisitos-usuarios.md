@@ -8,7 +8,7 @@ Compras, Ventas, Atención al cliente, Admisión de estudiantes, Inventario, etc
 Documentar las técnicas que utilizaron para realizar la obtención de requisitos del software: Entrevistas, Encuestas, Cuestionarios, Análisis de tareas, Análisis del dominio, 
 Prototipos (a través del uso de wireframes), Observación, entre otras técnicas innovadoras que el ED haya podido realizar durante la etapa de recopilación de requisitos del software.
 
-#Tips para mayor claridad
+# Tips para mayor claridad
 ## Propósito
 Definir los requisitos de usuario (lenguaje natural del usuario).
 
