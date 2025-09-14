@@ -13,7 +13,7 @@ Contexto y flujo actual → Problemas → Funcionalidades indispensables → Reg
 ## 3) Notas y evidencias (extracto)
 **E1 — Flujo actual manual con 3 consejeros por WhatsApp, lista semanal a admins.**  
 Se escribe por WhatsApp a uno de los tres consejeros; ellos consultan disponibilidad y el domingo consolidan y envían solicitudes.  
-**Impacto:** justifica calendario centralizado.  
+**Impacto:** justifica calendario centralizado.
 
 **E2 — Problema principal: desorden y choques de reservas.**  
 Reservas “independientes” se cruzan por falta de coordinación.  
