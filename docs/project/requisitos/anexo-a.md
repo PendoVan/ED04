@@ -44,5 +44,25 @@ Autenticación con **correo institucional** y **código** para filtrar estudiant
 **Impacto:** orden de implementación del MVP.
 
 ## 4) Conclusiones aplicadas
-- Se prioriza un **MVP** con: calendario centralizado, **auto-aprobación por reglas** (sin choques), **topes** por semana, **acceso institucional**, y **notificaciones**.
-- La **tarifa para externos** se registra a nivel de política/etiqueta; el **pago en líne**
+- Se prioriza un MVP con: calendario centralizado, auto-aprobación por reglas (sin choques), topes por semana, acceso institucional, y notificaciones.
+- La tarifa para externos se registra a nivel de política/etiqueta; el pago en línea queda fuera de alcance en v1 (plan de mejora).
+
+## 5) Trazabilidad RU ↔ Evidencia
+| RU | Evidencia | Resumen |
+|----|-----------|---------|
+| RU-01 (ver disponibilidad con estados) | E3 | Ver libre/ocupado; ocupados en rojo. |
+| RU-02 (reservar 1 franja) | E3/E8 | Pre-reserva por el alumno. |
+| RU-03 (ver historial) | E3/E8 | Seguimiento del alumno. |
+| RU-04 (cancelar) | E2 | Evitar choques/orden. |
+| RU-05 (notificaciones usuario + consejeros) | E6 | Alerta por creación/estado. |
+| RU-06 (parametrizar reglas y topes) | E5 | 2 por semana (parámetro). |
+| RU-07 (bloqueos) | E1/E2 | Evitar choques/orden. |
+| RU-09 (reportes) | E4 | Lista ordenada L–V. |
+| RU-10 (login institucional + código) | E7 | Filtrar estudiantes vs. externos. |
+| RU-11 (marcar externos y tarifa) | E3 | Registrar condición (sin pago online). |
+
+## 6) Consideraciones éticas
+Se informó uso académico de datos; sin datos sensibles; autorización si hay grabación.
+
+## 7) Limitaciones
+Una sola entrevista base; complementar con mini-encuesta y observación en la cancha.
