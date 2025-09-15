@@ -11,12 +11,14 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
 
 | Rol | Nombre | Responsabilidades |
 |-----|--------|-------------------|
-| Jefe de Proyecto | Alumno 1 | Coordinar tareas, comunicación con docente |
-| Desarrollador | Alumno 2 | Programación backend |
-| Desarrollador | Alumno 3 | Programación frontend |
-| Tester | Alumno 4 | Diseño y ejecución de pruebas |
+| Jefe de Proyecto | Alumno x | Coordinar tareas, comunicación con docente |
+| Analista | Alumno x | Calidad de requisitos |
+| Desarrollador | Alumno x | Programación backend |
+| Desarrollador | Alumno x | Programación frontend |
+| Tester | Alumno x | Diseño y ejecución de pruebas |
 
 ## Dinámica de trabajo
+
 - Reuniones semanales (presenciales y virtuales) para presentar avances, corregir errores y realizar Feedback. Los medios de comunciación empleados son el grupo de Whatsapp, Discord)
 - Uso de GitHub como repositorio central y herramienta principal para la documentación del proyecto.
 - Comunicación constante vía WhatsApp / Discord.
