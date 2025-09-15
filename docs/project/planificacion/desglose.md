@@ -1,17 +1,35 @@
-# Desglose de Actividades
+# Desglose del Trabajo (WBS)
 
-- **Requisitos (Semana 1)**  
-  Validación del alcance y aprobación de requisitos.
+En base a los requisitos identificados, el proyecto se divide en las siguientes fases:
 
-- **Diseño (Semanas 2 y 3)**  
-  Modelado de la base de datos, interfaces y diagramas de arquitectura.
+1. **Levantamiento de requisitos**
+   - Documentar requisitos de usuario
+   - Categorización de requisitos
+   - Negociación de requisitos
+   - Validación inicial
 
-- **Implementación (Semanas 4 a 6)**  
-  Programación modular (usuarios, reservas, administración).
+2. **Planificación**
+   - Organización del equipo
+   - Elaboración del cronograma
+   - Identificación de riesgos
+   - Selección de herramientas HW/SW
 
-- **Pruebas (Semana 7)**  
-  Ejecución de pruebas unitarias, de integración y aceptación.
+3. **Diseño**
+   - Diseño de la arquitectura general del sistema
+   - Modelado de datos y procesos
+   - Preparación de prototipos de interfaz
 
-- **Documentación (Semana 7)**  
-  Elaboración de manual técnico y de usuario.
+4. **Implementación**
+   - Desarrollo de módulos principales
+   - Integración de funcionalidades
+   - Ajustes en base a retroalimentación
 
+5. **Pruebas**
+   - Pruebas de validación de requisitos
+   - Verificación de la matriz RTM
+   - Corrección de errores
+
+6. **Entrega final**
+   - Documentación final
+   - Presentación del proyecto
+   - Retroalimentación y cierre
