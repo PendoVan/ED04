@@ -11,5 +11,5 @@
 - Base de datos: MySQL o PostgreSQL.
 - IDE: Visual Studio Code.
 - Control de versiones: Git y GitHub.
-- Herramientas de comunicación: Google Meet, WhatsApp.
+- Herramientas de comunicación: Google Meet, WhatsApp, Discord.
 
