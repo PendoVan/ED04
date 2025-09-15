@@ -41,3 +41,49 @@
 
 ## 🧩 Trazabilidad (RU → RF → CP)
 
+> Ver el detalle completo en [rtm.md](./rtm.md). Aquí un resumen mínimo.
+
+| RU (Requisito de Usuario)         | RF vinculados                 | CP vinculados (casos de prueba)                  |
+|-----------------------------------|-------------------------------|--------------------------------------------------|
+| RU-01 Disponibilidad              | RF-01 Listar franjas          | CP-01 Ver libres, CP-02 Feriados/Bloqueos        |
+| RU-02 Reservar 1 franja           | RF-02 Crear reserva           | CP-03 No superposición, CP-05 Tope semanal       |
+| RU-03 Ver/Cancelar mis reservas   | RF-03 Gestionar reservas      | CP-07 Ver mis reservas, CP-08 Cancelación        |
+| RU-06 Reglas/Topes                | RF-04 CRUD Reglas             | CP-09 Cambiar franja, CP-10 Tope parametrizable  |
+| RU-07 Bloqueos del calendario     | RF-05 CRUD Bloqueos           | CP-11 Reserva en fecha bloqueada                 |
+| RU-09 Tablero consejeros (L–V)    | RF-06 Listado/Tablero         | CP-12 Orden y filtros                            |
+| RU-11 Acceso institucional + código| RF-07 Autenticación           | CP-13 Login institucional                        |
+
+
+- La **RTM** mantiene la trazabilidad viva y evita huecos (todo RU mandatorio debe tener al menos 1 RF y 1+ CP).
+
+---
+
+## ✅ Resumen del MVP (mandatorios)
+
+Incluye, como mínimo:
+- RU-01 Disponibilidad con estados
+- RU-02 Reservar 1 franja
+- RU-03 Ver mis reservas
+- RU-04 Cancelar mi reserva
+- RU-05 Notificaciones
+- RU-06 Parametrizar reglas (duración, horarios, topes)
+- RU-07 Bloqueos del calendario
+- RU-09 Listado/Tablero para consejeros (L–V)
+- RU-10 Acceso con correo institucional + código
+
+> RU-08 (Aprobación manual) y RU-11 (externos/tarifa) quedan como **mejoras** del post-MVP.
+
+---
+
+## 🧪 Criterios de validación (resumen)
+
+- **Claridad:** RU sin ambigüedad ni duplicidad.  
+- **Viabilidad:** factible con los recursos y tiempo del avance.  
+- **Trazabilidad:** RU ↔ RF ↔ CP y RU ↔ Evidencia (Anexo A).  
+- **Testabilidad:** cada RU mandatorio tiene CP con resultado esperado.
+
+---
+
+## 🗒️ Changelog breve
+
+- **2025-09-13:** Versión inicial del README de requisitos; índice, convenciones y trazabilidad añadidas.
