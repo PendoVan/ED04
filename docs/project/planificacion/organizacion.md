@@ -20,7 +20,7 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
 
 ## Dinámica de trabajo
 
-- Reuniones semanales (presenciales y virtuales) para presentar avances, corregir errores y realizar Feedback. Los medios de comunciación empleados son el grupo de Whatsapp, Discord)
+- Reuniones semanales (presenciales y virtuales) para presentar avances, corregir errores y realizar Feedback. 
 - Uso de GitHub como repositorio central y herramienta principal para la documentación del proyecto.
 - Comunicación constante vía WhatsApp / Discord.
 - Compromiso con las tareas asignadas.
