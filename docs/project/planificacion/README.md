@@ -6,8 +6,8 @@ Este directorio contiene la planificación del proyecto **Sistema Web de Reserva
 - [Introducción](introduccion.md)
 - [Organización](organizacion.md)
 - [Hardware y Software](hwsw.md)
-- [WBS (Estructura de Desglose de Trabajo)](wbs.md)
 - [Desglose de Actividades](desglose.md)
+- [WBS (Estructura de Desglose de Trabajo)](wbs.md)
 - [Riesgos](riesgos.md)
 - [Cronograma](cronograma.md)
 
