@@ -9,6 +9,7 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
   - *Desarrollador B*: módulo frontend.
 - **Integrante 4 (Responsable de pruebas)**: define y ejecuta los casos de prueba.
 
+
 | Rol | Nombre | Responsabilidades |
 |-----|--------|-------------------|
 | Jefe de Proyecto | Alumno x | Coordinar tareas, comunicación con docente |
