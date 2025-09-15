@@ -2,10 +2,19 @@
 
 El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos para asegurar el avance del proyecto:
 
-- **Integrante 1 (Líder de proyecto)**: Coordinación general, seguimiento del cronograma.
-- **Integrante 2 (Analista de requisitos)**: Verificación de cumplimiento de requisitos, apoyo en validación.
-- **Integrante 3 (Diseñador de interfaces)**: Diseño de pantallas, experiencia de usuario.
-- **Integrante 4 (Desarrollador principal)**: Implementación de funcionalidades principales.
+- **Integrante 1 (Lider de proyecto)**: responsable de la coordinación general.
+- **Integrante 2 (Analista de requisitos)**: asegura la calidad de los requisitos de usuario.
+- **Equipo de desarrollo (2 integrantes)**:
+  - *Desarrollador A*: módulo backend.
+  - *Desarrollador B*: módulo frontend.
+- **Integrante 4 (Responsable de pruebas)**: define y ejecuta los casos de prueba.
+
+| Rol | Nombre | Responsabilidades |
+|-----|--------|-------------------|
+| Jefe de Proyecto | Alumno 1 | Coordinar tareas, comunicación con docente |
+| Desarrollador | Alumno 2 | Programación backend |
+| Desarrollador | Alumno 3 | Programación frontend |
+| Tester | Alumno 4 | Diseño y ejecución de pruebas |
 
 ## Dinámica de trabajo
 - Reuniones semanales (presenciales y virtuales) para presentar avances, corregir errores y realizar Feedback. Los medios de comunciación empleados son el grupo de Whatsapp, Discord)
