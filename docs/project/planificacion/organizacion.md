@@ -8,7 +8,7 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
 - **Integrante 4 (Desarrollador principal)**: Implementación de funcionalidades principales.
 
 ## Dinámica de trabajo
-- Reuniones semanales de avance.
-- Uso de GitHub como repositorio central.
-- Comunicación constante vía WhatsApp / Google Meet.
-
+- Reuniones semanales (presenciales y virtuales) para presentar avances, corregir errores y realizar Feedback. Los medios de comunciación empleados son el grupo de Whatsapp, Discord)
+- Uso de GitHub como repositorio central y herramienta principal para la documentación del proyecto.
+- Comunicación constante vía WhatsApp / Discord.
+- Compromiso con las tareas asignadas.
