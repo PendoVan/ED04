@@ -1,14 +1,17 @@
-# Cronograma
+# Cronograma del Proyecto
 
-El cronograma tentativo se organiza en 7 semanas:
+El cronograma propuesto se basa en las actividades del WBS y se desarrolla en un periodo académico.  
 
-| Semana | Actividades | Responsable(s) |
-|--------|-------------|----------------|
-| 1 | Revisión de requisitos y validación del alcance | Todos |
-| 2 | Diseño de base de datos y diagramas | Integrante 1, Integrante 2 |
-| 3 | Diseño de interfaces de usuario | Integrante 3, Integrante 4 |
-| 4 | Implementación: módulo de usuarios | Integrante 1 |
-| 5 | Implementación: módulo de reservas | Integrante 2 |
-| 6 | Implementación: módulo administrativo + integración BD | Integrante 3, Integrante 4 |
-| 7 | Pruebas, documentación y entrega | Todos |
-
+| Fase                 | Actividad                         | Semana(s) | Responsable principal |
+|----------------------|-----------------------------------|-----------|-----------------------|
+| **Requisitos**       | Documentación, categorización     | 1 - 2     | Analista              |
+|                      | Negociación y validación          | 2 - 3     | Líder + Analista      |
+| **Planificación**    | Organización del equipo           | 2         | Líder                 |
+|                      | Elaboración de cronograma         | 3         | Líder                 |
+|                      | Identificación de riesgos         | 3         | Todos                 |
+| **Diseño**           | Arquitectura y modelado           | 4 - 5     | Diseñador             |
+|                      | Prototipos                        | 5         | Diseñador             |
+| **Implementación**   | Desarrollo de módulos             | 6 - 8     | Desarrollador         |
+|                      | Integración y ajustes             | 8 - 9     | Desarrollador         |
+| **Pruebas**          | Validación y verificación RTM     | 9 - 10    | Encargado de pruebas  |
+| **Entrega final**    | Documentación y presentación      | 11 - 12   | Todos                 |
