@@ -11,12 +11,10 @@
 - ➤ [Introducción](./introduccion.md) — contexto, actores y definiciones.
 - ➤ [Requisitos de usuario](./requisitos-usuarios.md) — RU-xx por actor + supuestos.
 - ➤ [Categorización](./categorizacion.md) — Mandatorio / Mejora / Sin valor.
-- ➤ *(Opcional)* [Negociación](./negociacion.md) — acuerdos del MVP y trade-offs.
+- ➤ [Negociación](./negociacion.md) — acuerdos del MVP y trade-offs.
 - ➤ [Validación](./validacion.md) — criterios (claridad, viabilidad, trazabilidad) y conclusiones.
 - ➤ [RTM](./rtm.md) — Matriz de Trazabilidad RU ↔ RF ↔ CP.
 - ➤ [Anexo A](./anexo-a.md) — técnica de obtención (entrevista), evidencias y hallazgos.
-
-> **Nota:** Si no usan `negociacion.md`, dejad constancia breve de los acuerdos en `validacion.md`.
 
 ---
 
