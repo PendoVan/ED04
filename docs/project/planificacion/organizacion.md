@@ -12,11 +12,13 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
 
 | Rol | Nombre | Responsabilidades |
 |-----|--------|-------------------|
-| Jefe de Proyecto | Alumno x | Coordinar tareas, comunicación con docente |
-| Analista | Alumno x | Calidad de requisitos |
-| Desarrollador | Alumno x | Programación backend |
-| Desarrollador | Alumno x | Programación frontend |
-| Tester | Alumno x | Diseño y ejecución de pruebas |
+| Jefe de Proyecto | Martìn Tapia | Coordinar tareas, comunicación con docente |
+| Analista | Piero Badillo | Calidad de requisitos |
+| Desarrollador | Piero Badillo | Programación backend |
+| Desarrollador | Johan Reyes | Programación frontend |
+| Tester | Luis Gutierrez | Diseño y ejecución de pruebas |
+
+>Nota: Se asigna dos roles a un solo integrante para poder cumplir todas las responsabilidades entre los 4 integrantes.
 
 ## Dinámica de trabajo
 
