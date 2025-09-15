@@ -1,10 +1,11 @@
-# Riesgos y Mitigación
+# Análisis de Riesgos
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|--------|--------------|---------|------------|
-| Cambios en los requisitos | Media | Alto | Revisiones periódicas con la docente. |
-| Retraso en la implementación | Media | Alto | Distribución equitativa de tareas y seguimiento semanal. |
-| Problemas técnicos con framework elegido | Baja | Medio | Realizar pruebas piloto y capacitar al equipo. |
-| Dificultades de coordinación | Media | Medio | Uso de Trello y reuniones virtuales semanales. |
-| Limitaciones de tiempo | Alta | Alto | Priorizar funcionalidades críticas (MVP). |
+Se identifican los siguientes riesgos principales para el proyecto:
 
+| Riesgo                                | Impacto | Probabilidad | Mitigación |
+|--------------------------------------|---------|--------------|------------|
+| Retraso en la entrega de requisitos  | Alto    | Medio        | Establecer fechas claras y comunicación constante |
+| Falta de experiencia técnica         | Medio   | Alto         | Capacitación y apoyo en equipo |
+| Fallos en la integración del sistema | Alto    | Medio        | Realizar pruebas parciales y por módulos |
+| Cambios en requisitos del usuario    | Alto    | Medio        | Validar y negociar cambios antes de implementarlos |
+| Disponibilidad limitada del equipo   | Medio   | Medio        | Distribuir tareas equitativamente |
