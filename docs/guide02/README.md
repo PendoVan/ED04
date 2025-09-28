@@ -19,7 +19,9 @@ Aquí encontrarás las fases, documentos y ejemplos necesarios para desarrollar 
 Esta guia se divide en varias secciones de acuerdo con el detalle que se muestra en la estructura del repositorio. Aquí daremos las siguientes consideraciones generales para su desarrollo:
 - Objetivo: 
 Desarrollar e implementar un prototipo de software en tres (03) meses de duración aplicando una metodología de proceso iterativo.
+
 INICIO: 25 de agosto del 2025
+
 FIN: 24 de noviembre del 2025
 
 - Pregunta de investigación: La cual será respondida por cada uno de los ED al término de la implementación del prototipo de software.
