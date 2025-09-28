@@ -20,9 +20,9 @@ Esta guia se divide en varias secciones de acuerdo con el detalle que se muestra
 - Objetivo: 
 Desarrollar e implementar un prototipo de software en tres (03) meses de duración aplicando una metodología de proceso iterativo.
 
-INICIO: 25 de agosto del 2025
+  INICIO: 25 de agosto del 2025
 
-FIN: 24 de noviembre del 2025
+  FIN: 24 de noviembre del 2025
 
 - Pregunta de investigación: La cual será respondida por cada uno de los ED al término de la implementación del prototipo de software.
 En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de desarrollo de software para posteriormente iniciar con su ejecución como parte del trabajo de fin de curso:
