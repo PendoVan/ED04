@@ -15,12 +15,16 @@ Aquí encontrarás las fases, documentos y ejemplos necesarios para desarrollar 
 3. Trabaja dentro de la carpeta:  
 
 
-## Contenido
-Esta guia se divide en dos secciones:
-- Fase 01: Especificación de requisitos de software
-En una primera fase, identificar las especificaciones de requisitos del software que se desarrollará como parte de los trabajos iniciales para la implementación del trabajo de fin de curso. 
-- Fase 02: Planificacion del proyecto
-En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de desarrollo de software para posteriormente iniciar con su ejecución como parte del trabajo de fin de curso. 
+## Lineamientos generales
+Esta guia se divide en varias secciones de acuerdo con el detalle que se muestra en la estructura del repositorio. Aquí daremos las siguientes consideraciones generales para su desarrollo:
+- Objetivo: 
+Desarrollar e implementar un prototipo de software en tres (03) meses de duración aplicando una metodología de proceso iterativo.
+INICIO: 25 de agosto del 2025
+FIN: 24 de noviembre del 2025
+
+- Pregunta de investigación: La cual será respondida por cada uno de los ED al término de la implementación del prototipo de software.
+En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de desarrollo de software para posteriormente iniciar con su ejecución como parte del trabajo de fin de curso:
+¿El modelo de ciclo de vida en espiral es aplicable para terminar el proyecto de desarrollo de un prototipo de software en tres (03) meses durante el semestre académico 2025-II para el curso de “Procesos de Software”?
 
 ---
 
