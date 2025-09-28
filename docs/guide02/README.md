@@ -1,4 +1,4 @@
-# Guía 01 — GUIA DE APRENDIZAJE PARA EL DESARROLLO E IMPLEMENTACIÓN DE UN PROTOTIPO DE SOFTWARE
+# Guía 02 — GUIA DE APRENDIZAJE PARA EL DESARROLLO E IMPLEMENTACIÓN DE UN PROTOTIPO DE SOFTWARE
 
 Bienvenido/a 👋. Este repositorio contiene la **plantilla de trabajo** para la segunda parte del curso de Procesos de Software.  
 Aquí encontrarás las fases, documentos y ejemplos necesarios para desarrollar la etapa de gabinete de tu proyecto.
