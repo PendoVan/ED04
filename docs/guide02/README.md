@@ -51,27 +51,39 @@ En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de des
   - `requisitos-no-funcionales.md`: Descripción detallada de requisitos no funcionales mandatorios del software
   - `pseudocodigo.md`: Pseudocódigo de los requisitos de sistema más importantes (Requisitos funcionales mandatorios)
   - `interfaces-usuario.md`: Formato de las interfaces de usuario que se utilizaron durante la recopilación de requisitos utilizando herramientas Mockups
-  - 
+    
 - **Fase 03: Análisis y diseño del prototipo de software**
   - `README.md`: instrucciones de la fase
-  - 
+  - `patron.md`: Patrón de diseño del software (IDE de desarrollo) / Patrón de la arquitectura del software según corresponda con la naturaleza del proyecto de prototipo de software
+  - `diagrma-procesos.md`: Diagrama de procesos del negocio del prototipo de software
+  - `casos-uso.md`: Diagramas y documentación de los casos de uso
+  - `modelo-conceptual.md`: Modelo conceptual de datos
+  - `modelo-logico-fisico.md`: Modelo lógico-físico de datos (Opcional)
+    
 - **Fase 04: Implementación del prototipo de software**
   - `README.md`: instrucciones de la fase
-  - 
+  - `modulos.md`: Módulos (rutinas, opciones de menú) del software
+  - `codigo-fuente.md`: Código fuente de las funciones más importantes del software
+  - `clases-generadas.md`: Clases o tablas generadas a través de base de datos (Opcional)
+  - `pantallas-usuario.md`: Pantallas de interfaz de usuario del prototipo de software
+    
 - **Fase 05: Recursos de software y hardware utilizados**
   - `README.md`: instrucciones de la fase
-  - 
+  - `software.md`: Software
+  - `hardware.md`: Hardware
+    
 - **Fase 06: Pruebas del prototipo de software**
   - `README.md`: instrucciones de la fase
-  - 
+  - `caja-negra.md`: Pruebas de caja negra
+  - `reporte-errores.md`: Reporte de errores
+    
 - **Fase 07: Seguimiento a la planificación del prototipo de software**
   - `README.md`: instrucciones de la fase
-  - 
+    
 - **Fase 08: Respuesta a la pregunta de investigación**
   - `README.md`: instrucciones de la fase
-  - 
     
-
+ 
 ---
 
 ## 🛠️ Instrucciones de Uso
