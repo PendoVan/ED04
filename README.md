@@ -24,9 +24,7 @@ Allí encontrarás la primera guía que debes completar.
 > Como ustedes clonaron únicamente la **Guía 01**, esta nueva guía **no aparecerá automáticamente** en sus copias locales.
 > 
 > 👉 Para consultarla deben ingresar directamente al **repositorio original del curso** en GitHub y revisar la carpeta:
-> 
-> [Ir a Guía 02](../guide02/README.md)
-> 
+>
 > ⚠️ No es necesario volver a clonar.  
 
 
