@@ -1,4 +1,4 @@
-# PLANIFICACION DEL PROTOTIPO DE SOFTWARE:
+# Fase 01: Planificación del prototipo de software:
 
 Colocar el plan inicial del proyecto de prototipo de software utilizando la herramienta ProjectLibre y de acuerdo con los lineamientos descritos en la “GUIA DE APRENDIZAJE PARA LA PLANIFICACIÓN DE UN PROYECTO DE SOFTWARE” desarrollado en clase.
 
