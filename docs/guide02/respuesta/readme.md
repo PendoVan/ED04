@@ -1,6 +1,6 @@
 ## Respuesta a la pregunta de investigación
 
-Se responde en forma abierta a la pregunta de investigación formulada en los lineamientos de la presente guía de aprendizaje:
+Se responde en forma abierta a la pregunta de investigación formulada en la sección "Lineamientos" de la presente guía de aprendizaje:
 
 [Guía 02 — Encabezado](../README.md#guía-02--guia-de-aprendizaje-para-el-desarrollo-e-implementación-de-un-prototipo-de-software)
 
