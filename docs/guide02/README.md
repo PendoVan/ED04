@@ -45,12 +45,12 @@ En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de des
     
 - **Fase 02: Especificación de requisitos del prototipo de software**
   - `README.md`: instrucciones de la fase
-  - `requisitos_usuario.md`
-  - `requisitos-funcionales-mandatorios.md`: Ejemplo de miembros y roles del equipo
-  - `requisitos-funcionales-mejora.md`
-  - `requisitos-no-funcionales.md`: Ejemplo de desglose de tareas
-  - `pseudocodigo.md`
-  - `interfaces-usuario.md`
+  - `requisitos_usuario.md`: Requisitos de usuario
+  - `requisitos-funcionales-mandatorios.md`: Descripción detallada de requisitos funcionales mandatorios del software
+  - `requisitos-funcionales-mejora.md`: Descripción detallada de requisitos funcionales de mejora del software
+  - `requisitos-no-funcionales.md`: Descripción detallada de requisitos no funcionales mandatorios del software
+  - `pseudocodigo.md`: Pseudocódigo de los requisitos de sistema más importantes (Requisitos funcionales mandatorios)
+  - `interfaces-usuario.md`: Formato de las interfaces de usuario que se utilizaron durante la recopilación de requisitos utilizando herramientas Mockups
   - 
 - **Fase 03: Análisis y diseño del prototipo de software**
   - `README.md`: instrucciones de la fase
