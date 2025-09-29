@@ -17,6 +17,19 @@ Allí encontrarás la primera guía que debes completar.
 
 ---
 
+> 📌 **Aviso importante (Semana 7):**
+> 
+> Ya está disponible la **Guía 02 — GUIA DE APRENDIZAJE PARA EL DESARROLLO E IMPLEMENTACIÓN DE UN PROTOTIPO DE SOFTWARE**.
+> 
+> Como ustedes clonaron únicamente la **Guía 01**, esta nueva guía **no aparecerá automáticamente** en sus copias locales.
+> 
+> 👉 Para consultarla deben ingresar directamente al **repositorio original del curso** en GitHub y revisar la carpeta:
+> 
+> [Ir a Guía 02](../guide02/README.md)
+> 
+> ⚠️ No es necesario volver a clonar.  
+
+
 ## 📂 Guías disponibles
 
 - **[Guía 01 — Guía de aprendizaje para la planificación de un proyecto de SW](docs/guide01)**  
