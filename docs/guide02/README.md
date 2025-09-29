@@ -37,12 +37,10 @@ En una segunda fase, cada grupo de trabajo elaborará el plan de proyecto de des
   
 - **Metodología**
   - `README.md`: instrucciones de la metodología
-  - 
-
+    
 - **Fase 01: Planificación del prototipo de software**
   - `README.md`: instrucciones de la fase
-  - 
-    
+        
 - **Fase 02: Especificación de requisitos del prototipo de software**
   - `README.md`: instrucciones de la fase
   - `requisitos_usuario.md`: Requisitos de usuario
