@@ -13,7 +13,7 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
 | Rol | Nombre | Responsabilidades |
 |-----|--------|-------------------|
 | Jefe de Proyecto | Martín Tapia | Coordinar tareas, comunicación con docente |
-| Analista | Piero Badillo | Calidad de requisitos |
+| Analista | Martín Tapia | Calidad de requisitos |
 | Desarrollador | Piero Badillo | Programación backend |
 | Desarrollador | Johan Reyes | Programación frontend |
 | Tester | Luis Gutierrez | Diseño y ejecución de pruebas |
@@ -29,7 +29,7 @@ El equipo de trabajo está conformado por 4 integrantes, con roles distribuidos 
 
 ## Observaciones y mejoras propuestas
 
-- **Conexión requisitos–pruebas**: se sugiere que el Analista de requisitos (Piero Badillo) trabaje de manera coordinada con el Tester (Luis Guiterrez) para asegurar que los casos de prueba reflejen fielmente los requisitos documentados en `docs/project/requisitos`.
+- **Conexión requisitos–pruebas**: se sugiere que el Analista de requisitos (Martín Tapia) trabaje de manera coordinada con el Tester (Luis Guiterrez) para asegurar que los casos de prueba reflejen fielmente los requisitos documentados en `docs/project/requisitos`.
 
 - **Control de avance**: establecer revisiones semanales de cumplimiento de requisitos antes de pasar a la etapa de desarrollo, garantizando trazabilidad y evitando desviaciones.
 
