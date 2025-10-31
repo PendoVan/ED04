@@ -1,7 +1,7 @@
 ## Requisitos de Usuario
 
 Este apartado ya fue trabajado en la 
-[Guía 01 - Sección: Requisitos de Usuario](docs/project/requisitos/requisitos-usuarios.md).
+[Guía 01 - Sección: Requisitos de Usuario](https://github.com/PendoVan/ED04/blob/32ff384cb87fcd895421a8223777459fafadcfe4/docs/project/requisitos/requisitos-usuarios.md).
 
 Consulta y reutiliza ese contenido.
 
