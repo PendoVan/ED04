@@ -10,6 +10,25 @@ El sistema debe permitir al usuario visualizar la disponibilidad de las canchas 
 - Permite aplicar filtros (fecha, sede, tipo de superficie).
 - Actualiza en tiempo real según nuevas reservas o bloqueos.
 
+## Pseudocódigo de RF-01:
+
+ALGORITMO ConsultarDisponibilidad
+ENTRADA: fechaSeleccionada, tipoCancha
+
+INICIO
+  mostras "Consultar disponibilidad"
+  listaCanchas <- obtenerCanchasDisponibles(fechaSeleccionada, tipoCancha)
+      SI listaCanchas está vacía ENTONCES
+          mostrar "No hay canchas disponibles para la fecha seleccionada"
+      SINO
+          PARA cada cancha EN listaCanchas HACER
+              mostrar "Cancha:", cancha.nombre, 
+                      " - Horario disponible:", cancha.horario
+          FIN PARA
+      FIN SI
+  FIN
+FIN ALGORITMO
+
 ## RF-02: Realizar una reserva
 El sistema debe permitir reservar una cancha disponible registrando los datos del usuario y la franja horaria.
 
