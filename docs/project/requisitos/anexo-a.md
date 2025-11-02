@@ -43,6 +43,12 @@ Autenticación con **correo institucional** y **código** para filtrar estudiant
 1) **Registro/filtrado** de alumnos; 2) **Disponibilidad + pre-reserva** por el alumno; 3) **Tablero consolidado** para consejeros.  
 **Impacto:** orden de implementación del MVP.
 
+
+> Formato dialogado (Entrevistador <-> Entrevistado/Cliente),
+> Fuente: sesión con Alvaro Matias Salazar Zapata (Consejero FISI).
+
+[_Ver transcripción completa_](./entrevista.md)
+
 ## 4) Conclusiones aplicadas
 - Se prioriza un MVP con: calendario centralizado, auto-aprobación por reglas (sin choques), topes por semana, acceso institucional, y notificaciones.
 - La tarifa para externos se registra a nivel de política/etiqueta; el pago en línea queda fuera de alcance en v1 (plan de mejora).

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="oKoJpVoO3sPkhshCpb0w" name="Reservar - Disponible (OK)">
-        <mxGraphModel dx="913" dy="1416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F7FAFC" math="0" shadow="0">
+        <mxGraphModel dx="1040" dy="1416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F7FAFC" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -83,7 +83,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="L2wSrA-ytX0b8yJbFahE" name="Reservar - Error">
-        <mxGraphModel dx="772" dy="1198" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F7FAFC" math="0" shadow="0">
+        <mxGraphModel dx="880" dy="1198" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F7FAFC" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
