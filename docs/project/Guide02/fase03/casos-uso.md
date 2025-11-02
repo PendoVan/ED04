@@ -1,0 +1,1 @@
+![diagrama_casos_de_uso.png](../../GUIDE%20II/Fase%20III/diagrama_casos_de_uso.png)
