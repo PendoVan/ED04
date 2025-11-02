@@ -1,11 +1,11 @@
 ## Documentación de casos de uso
-| Caso de uso: Acceso Institucional |                                                                           | 
-|-----------------------------------|---------------------------------------------------------------------------|
-| ID:                               | CUS - 01                                                                  |
+| Caso de uso: Acceso Institucional |                                                                       | 
+|-----------------------------------|-----------------------------------------------------------------------|
+| ID:                               | CUS - 01                                                              |
 | Descripción:                      | El usuario se registra con su correo institucional y código de estudiante |
-| Actor:                            | Estudiante                                                                |
-| Precondición:                     | -                                                                         |
-| Postcondición                     |                                                                           |
+| Actor:                            | Estudiante                                                            |
+| Precondición:                     | -                                                                     |
+| Postcondición                     |                                                                       |
 
 | Flujo principal                                                             |
 |-----------------------------------------------------------------------------|
@@ -17,4 +17,4 @@
 |El caso de uso termina.|
 
 ## Diagrama de casos de uso
-![diagrama_casos_de_uso.png](../../GUIDE%20II/Fagit push se%20III/diagrama_casos_de_uso.png)
+![diagrama_casos_de_uso.png](../../GUIDE%20II/Fase%20III/diagrama_casos_de_uso.png)
