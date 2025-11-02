@@ -1,0 +1,174 @@
+<mxfile host="65bd71144e">
+    <diagram id="oKoJpVoO3sPkhshCpb0w" name="Reservar - Disponible (OK)">
+        <mxGraphModel dx="913" dy="1416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F7FAFC" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="38" value="" style="group;rounded=0;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="10" y="200" width="800" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;gradientColor=#D1D5DB;gradientDirection=radial;shadow=1;" vertex="1" parent="38">
+                    <mxGeometry width="800" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="38">
+                    <mxGeometry x="30" y="24.6" width="340" height="360.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="38">
+                    <mxGeometry x="430" y="24.6" width="340" height="360.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Acepto los Términos y&amp;nbsp;&lt;div&gt;Condiciones&lt;/div&gt;" style="rounded=1;fillColor=#F0F2F5;strokeColor=#111827;align=left;verticalAlign=middle;fontStyle=0;fontSize=13;labelPosition=right;verticalLabelPosition=middle;spacingLeft=10;shadow=0;dashed=0;fontFamily=Lucida Console;fontColor=#111827;html=1;" vertex="1" parent="38">
+                    <mxGeometry x="490" y="210" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Cancelar" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=12;fillColor=#FFFFFF;align=center;strokeColor=#D1D5DB;fontColor=#111827;verticalAlign=middle;spacing=5;spacingTop=0;fontFamily=Lucida Console;arcSize=16;strokeOpacity=100;fillOpacity=100;gradientColor=#CBD5E1;" vertex="1" parent="38">
+                    <mxGeometry x="630" y="280" width="120" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Confirmar Reserva" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=12;fillColor=#2563EB;align=center;strokeColor=#D1D5DB;fontColor=#FFFFFF;verticalAlign=middle;spacing=5;spacingTop=0;fontFamily=Lucida Console;arcSize=16;strokeOpacity=100;fillOpacity=100;" vertex="1" parent="38">
+                    <mxGeometry x="450" y="280" width="120" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Sistema de Reservas FISI - Reservar&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F2A44;fontFamily=Lucida Console;fontSize=25;gradientColor=#1F2A44;gradientDirection=radial;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="14" y="60" width="800" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Resumen de reserva" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;fontColor=#111827;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="240" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Hora:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="410" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="10:00-12:00" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="410" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Confirmación" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;fontColor=#111827;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="240" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="110" y="510" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Disponible" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontFamily=Lucida Console;fontStyle=1;fillColor=#DCFCE7;fontColor=#166534;spacingLeft=40;" vertex="1" parent="24">
+                    <mxGeometry width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#22C55E;" vertex="1" parent="24">
+                    <mxGeometry x="30" y="14.5" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="330" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Cancha:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="25">
+                    <mxGeometry width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Cancha FISI" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="25">
+                    <mxGeometry x="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="370" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Fecha:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="26">
+                    <mxGeometry width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="2025-10-31" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="26">
+                    <mxGeometry x="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="450" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Duración:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="27">
+                    <mxGeometry width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="120 min" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="27">
+                    <mxGeometry x="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Validación exitosa: franja disponible" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;strokeWidth=2;fontColor=#166534;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="310" width="320" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="L2wSrA-ytX0b8yJbFahE" name="Reservar - Error">
+        <mxGraphModel dx="772" dy="1198" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F7FAFC" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-1" value="" style="group;rounded=0;spacingTop=-2;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="10" y="200" width="840" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;gradientColor=#D1D5DB;gradientDirection=radial;shadow=1;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry width="800" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="30" y="24.6" width="340" height="360.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="430" y="24.6" width="340" height="360.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-5" value="Acepto los Términos y&amp;nbsp;&lt;div&gt;Condiciones&lt;/div&gt;" style="rounded=1;fillColor=#F0F2F5;strokeColor=#111827;align=left;verticalAlign=middle;fontStyle=0;fontSize=13;labelPosition=right;verticalLabelPosition=middle;spacingLeft=10;shadow=0;dashed=0;fontFamily=Lucida Console;fontColor=#111827;html=1;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="490" y="190" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-6" value="Cancelar" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=12;fillColor=#FFFFFF;align=center;strokeColor=#D1D5DB;fontColor=#111827;verticalAlign=middle;spacing=5;spacingTop=0;fontFamily=Lucida Console;arcSize=16;strokeOpacity=100;fillOpacity=100;gradientColor=#CBD5E1;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="630" y="230" width="120" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-7" value="Confirmar Reserva" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=12;fillColor=#9CA3AF;align=center;strokeColor=#D1D5DB;fontColor=#F9FAFB;verticalAlign=middle;spacing=5;spacingTop=0;fontFamily=Lucida Console;arcSize=16;strokeOpacity=100;fillOpacity=100;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="450" y="230" width="120" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="HbLcLDdkpzHBdxRonMq5-1" value="Corrija el problema para continuar" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#F7FAFC;strokeWidth=1;fillColor=#F7FAFC;fontColor=#711623;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Lucida Console;fontSize=10;fontStyle=2" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="450" y="280" width="300" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="HbLcLDdkpzHBdxRonMq5-5" value="* Los bloqueos tienen prioridad sobre las reservas" style="html=1;rounded=1;fillColor=#CBD5E1;strokeColor=#DFE1E5;fontSize=10;align=left;fontColor=#000000;shadow=1;arcSize=1;whiteSpace=wrap;verticalAlign=top;spacingLeft=15;spacingRight=15;spacingTop=2;sketch=1;hachureGap=4;pointerEvents=0;fontFamily=Lucida Console;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-1">
+                    <mxGeometry x="440" y="320" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-8" value="&lt;b&gt;&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Sistema de Reservas FISI - Reservar&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F2A44;fontFamily=Lucida Console;fontSize=25;gradientColor=#1F2A44;gradientDirection=radial;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="14" y="60" width="800" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-9" value="Resumen de reserva" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;fontColor=#111827;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="240" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-10" value="Hora:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="410" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-11" value="12:00-14:00" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="410" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-12" value="Confirmación" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;fontColor=#111827;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="240" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-13" value="" style="group;strokeColor=#EF4444;fillColor=#FEE2E2;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="110" y="510" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-14" value="Bloqueado" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontFamily=Lucida Console;fontStyle=1;fillColor=#FEE2E2;fontColor=#EF4444;spacingLeft=40;strokeColor=#EF4444;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-13">
+                    <mxGeometry width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EF4444;strokeColor=#FEE2E2;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-13">
+                    <mxGeometry x="30" y="14.5" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-16" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="330" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-17" value="Cancha:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-16">
+                    <mxGeometry width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-18" value="Cancha FISI" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-16">
+                    <mxGeometry x="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-19" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="370" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-20" value="Fecha:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-19">
+                    <mxGeometry width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-21" value="Viernes 2025-10-31" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-19">
+                    <mxGeometry x="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-22" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="50" y="450" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-23" value="Duración:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#6B7280;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-22">
+                    <mxGeometry width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-24" value="120 min" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontFamily=Lucida Console;fontColor=#111827;" vertex="1" parent="Jecq6A-zinJYXgJ9em-5-22">
+                    <mxGeometry x="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Jecq6A-zinJYXgJ9em-5-25" value="No disponible: franja bloqueada por mantenimiento*" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#EF4444;strokeWidth=2;fontColor=#991B1B;fontSize=18;fontFamily=Lucida Console;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="310" width="320" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
