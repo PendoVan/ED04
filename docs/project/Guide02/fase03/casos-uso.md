@@ -17,4 +17,4 @@
 |El caso de uso termina.|
 
 ## Diagrama de casos de uso
-![diagrama_casos_de_uso.png](../../GUIDE%20II/Fase%20III/diagrama_casos_de_uso.png)
+![diagrama_casos_de_uso.png](diagrama_casos_de_uso.png)
