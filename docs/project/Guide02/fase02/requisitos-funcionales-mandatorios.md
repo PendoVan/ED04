@@ -17,7 +17,7 @@ La matriz de trazabilidad asegura la relación entre los **Requisitos de Usuario
 | RU-06: Parametrizar reglas | RF-04: CRUD de reglas (duración, horarios, topes) | CP-11: Crear regla <br> CP-12: Editar regla <br> CP-13: Aplicar regla en validación de reservas | Reglas modificables sin despliegue. |
 | RU-07: Bloqueos de calendario | RF-05: CRUD de bloqueos (mantenimiento/eventos) | CP-14: Registrar bloqueo <br> CP-15: Bloqueo impide reserva <br> CP-16: Editar/eliminar bloqueo | Los bloqueos tienen prioridad sobre reservas. |
 | RU-09: Tablero operativo consejeros | RF-06: Tablero L–V con filtros básicos | CP-17: Mostrar reservas por semana <br> CP-18: Filtrar por estado <br> CP-19: Exportar listado simple | Enfocado en gestión semanal. |
-| RU-10: Acceso institucional | *(Pospuesto; no habrá registro en v1)* | CP-20: Login válido con correo FISI <br> CP-21: Rechazar correo no institucional <br> CP-22: Marcar usuario externo | Seguridad y segmentación de usuarios. |
+| RU-10: Acceso institucional | *(Pospuesto; no habrá registro en v1)* | - | Seguridad y segmentación de usuarios. |
 | RU-08: Aprobación manual (mejora) | *(Pospuesto; se integrará en versión futura)* | – | Auto-aprobación en v1; manual queda pendiente. |
 | RU-11: Identificación externos (mejora) | *(Metadato; no implementa flujo en v1)* | – | Registro de externos, cobros fuera de alcance. |
 
