@@ -70,26 +70,9 @@
 | El sistema le avisa al usuario que ha cancelado su reserva.                                                  |
 | El caso de uso finaliza.                                                                                     |
 ##
-| Caso de uso: Administrar reglas |                                                                                                              |
-|---------------------------------|--------------------------------------------------------------------------------------------------------------|
-| ID:                             | CUS-05                                                                                                       |
-| Descripción:                    | Permite al Consejo gestionar (CRUD) las reglas que rigen las reservas (duración, horarios, topes semanales). |
-| Actor:                          | Consejero.                                                                                                   |
-| Precondición:                   | El Consejero está autenticado y accede al módulo de administración.                                          | 
-| Postcondición:                  | La configuración de reglas del sistema se ha actualizado y aplica inmediatamente a CUS-02 y CUS-03           |        
-
-| Flujo principal                                                                    |
-|------------------------------------------------------------------------------------|
-| El consejero accede al módulo Parametrizar reglas.                                 |
-| El sistema le muestra el listado actual de reglas activas.                         |
-| El Consjero elije entre seleccionar una regla y editarla, o crear una nueva regla. |
-| El sistema valida y guarda la nueva configuración de la regla.                     |
-| El sistema muestra mensaje de operación realizada con éxito.                       |
-| El caso de uso finaliza.                                                           |
-##
 | Caso de uso: Administrar Bloqueos |                                                                                                                              |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| ID:                               | CUS-06                                                                                                                       |
+| ID:                               | CUS-05                                                                                                                       |
 | Descripción:                      | Permite al Consejero gestionar (CRUD) periodos de bloqueo en el calendario (mantenimiento o eventos) que impidan la reserva. |
 | Actor:                            | Consejero.                                                                                                                   |
 | Precondición:                     | El Consejero está autenticado.                                                                                               | 
@@ -105,7 +88,7 @@
 ##
 | Caso de uso: Ver Tablero Operativo |                                                                                                                        |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| ID:                                | CUS-07                                                                                                                 |
+| ID:                                | CUS-06                                                                                                                 |
 | Descripción:                       | Muestra al consejero el listado operativo de reservas ordenado de Lunes a Jueves, con filtros para la gestión semanal. |
 | Actor:                             | Consejero.                                                                                                             |
 | Precondición:                      | El Consejero está autenticado.                                                                                         | 
@@ -121,7 +104,7 @@
 ##
 | Caso de uso: Notificar al Usuario  |                                                                                        |
 |------------------------------------|----------------------------------------------------------------------------------------|
-| ID:                                | CUS-08                                                                                 |
+| ID:                                | CUS-07                                                                                 |
 | Descripción:                       | Permite al consejero notificar al usuario el estado en el que se encuentra su reserva. |
 | Actor:                             | Consejero.                                                                             |
 | Precondición:                      | El Consejero está autenticado.                                                         | 
