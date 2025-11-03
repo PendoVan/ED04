@@ -20,12 +20,12 @@ Consulta y reutiliza ese contenido.
 | RU-06 | **Parametrizar reglas** (duración, horarios, **topes** por semana)     | E5                  | Gobernanza; v1: 2 reservas/semana por usuario (parametrizable). |
 | RU-07 | **Bloqueos** de calendario (mantenimiento/eventos)                     | E1, E2              | Evita choques; prioridad sobre solicitudes. |
 | RU-09 | **Listado/Tablero** operativo para consejeros (ordenado L–V)           | E4, E8              | Prioridad del consejero; uno de los “top 3” de la entrevista. |
-| RU-10 | **Acceso con correo institucional + código**                           | E7                  | Filtra estudiantes vs. externos; requisito de acceso. |
 
 ## Mejoras (post-MVP)
 | ID    | Descripción breve | Evidencia | Motivo para posponer |
 |-------|-------------------------------------------------------|----------|----------------------|
 | RU-08 | **Aprobación manual** por consejeros                  | E5       | v1 funciona con **auto-aprobación por reglas**; manual complica flujo/tiempos. |
+| RU-10 | **Acceso con correo institucional + código**          | E7       | Filtra estudiantes vs. externos; requisito de acceso. Pospuesto, se ingresará directamente en v1. |
 | RU-11 | **Identificar externos** y **marcar tarifa**          | E3       | Se registra como metadato; procesos de cobro quedan fuera de v1. |
 
 ## Sin valor (fuera de alcance v1)
