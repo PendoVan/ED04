@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from .database import Base, engine
 from .routers import reservas
 
-app = FastAPI(title="Sistema de Reservas FISI")
+app = FastAPI(title="Sistema de Reservas FISI - ED04")
 
 Base.metadata.create_all(bind=engine)
 
