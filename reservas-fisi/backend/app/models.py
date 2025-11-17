@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String, Date
-from.database import Base
+from .database import Base
 
 class Reserva(Base):
-    _tablename_ = "reservas"
+    __tablename__ = "reservas"
 
     id = Column(Integer, primary_key=True, index=True)
     usuario = Column(String, nullable=False)

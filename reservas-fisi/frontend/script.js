@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/reservas";
+const API_URL = "https://zany-yodel-7vww4qg94x7xhwq5w-8000.app.github.dev";
 
 document.getElementById("formReserva").addEventListener("submit", async (e) => {
   e.preventDefault();
