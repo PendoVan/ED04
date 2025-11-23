@@ -4,9 +4,14 @@ from datetime import datetime, time, timedelta, date
 
 from backend.database import get_db
 from backend.models.reserva import Reserva
+from backend.models.bloqueo import Bloqueo
 
 router = APIRouter(prefix="/disponibilidad", tags=["Disponibilidad"])
 
+
+# -----------------------------------------------------------
+# GENERAR FRANJAS DE 2 HORAS (10 → 18)
+# -----------------------------------------------------------
 
 def generar_franjas():
     """Genera franjas de 2 horas entre 10:00 y 18:00."""
@@ -27,12 +32,15 @@ def generar_franjas():
     return horas
 
 
+# -----------------------------------------------------------
+# DISPONIBILIDAD DE UNA FECHA (RESERVAS + BLOQUEOS)
+# -----------------------------------------------------------
 
 @router.get("/{fecha}")
 def disponibilidad_por_fecha(fecha: str, db: Session = Depends(get_db)):
     """
-    Retorna las franjas horarias de un día con su estado:
-    disponible / reservado / bloqueado
+    Retorna todas las franjas horarias de un día
+    con su estado: disponible / reservado / bloqueado
     """
 
     # Validar fecha
@@ -42,7 +50,18 @@ def disponibilidad_por_fecha(fecha: str, db: Session = Depends(get_db)):
         raise HTTPException(400, "Formato de fecha inválido. Use YYYY-MM-DD")
 
     # Obtener reservas del día
-    reservas = db.query(Reserva).filter(Reserva.fecha == fecha_dt).all()
+    reservas = db.query(Reserva).filter(
+        Reserva.fecha == fecha_dt,
+        Reserva.estado == "reservado"
+    ).all()
+
+    # Obtener bloqueos del día
+    bloqueos = db.query(Bloqueo).filter(
+        Bloqueo.fecha == fecha_dt
+    ).all()
+
+    # Revisar si el día completo está bloqueado
+    dia_bloqueado = any(b.tipo == "dia" for b in bloqueos)
 
     franjas = generar_franjas()
     respuesta = []
@@ -50,11 +69,21 @@ def disponibilidad_por_fecha(fecha: str, db: Session = Depends(get_db)):
     for inicio, fin in franjas:
         estado = "disponible"
 
-        for r in reservas:
-            if r.hora_inicio == inicio and r.hora_fin == fin:
-                estado = "reservado"
-                break
+        # 1️⃣ SI TODO EL DÍA ESTÁ BLOQUEADO
+        if dia_bloqueado:
+            estado = "bloqueado"
 
+        # 2️⃣ VERIFICAR BLOQUEO DE FRANJA
+        for b in bloqueos:
+            if b.tipo == "franja" and b.hora_inicio == inicio:
+                estado = "bloqueado"
+
+        # 3️⃣ VERIFICAR SI LA FRANJA ESTÁ RESERVADA
+        for r in reservas:
+            if r.hora_inicio == inicio:
+                estado = "reservado"
+
+        # registrar estado final
         respuesta.append({
             "inicio": inicio,
             "fin": fin,
