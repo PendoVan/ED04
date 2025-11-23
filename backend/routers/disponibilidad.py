@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import datetime, time, timedelta, date
+from typing import List, Dict
 
 from backend.database import get_db
 from backend.models.reserva import Reserva
@@ -8,86 +9,78 @@ from backend.models.bloqueo import Bloqueo
 
 router = APIRouter(prefix="/disponibilidad", tags=["Disponibilidad"])
 
+def verificar_estado_rango(inicio_hora: int, fin_hora: int, reservas, bloqueos, dia_bloqueado):
+    """
+    Determina si un rango específico [inicio, fin) está libre.
+    Retorna: 'Disponible', 'Reservado', 'Bloqueado'
+    """
+    if dia_bloqueado:
+        return "Bloqueado"
 
-# -----------------------------------------------------------
-# GENERAR FRANJAS DE 2 HORAS (10 → 18)
-# -----------------------------------------------------------
+    # Verificar superposición con bloqueos (de 1 hora)
+    for b in bloqueos:
+        b_ini = int(b.hora_inicio.split(":")[0])
+        b_fin = int(b.hora_fin.split(":")[0])
+        # Si hay overlap
+        if inicio_hora < b_fin and fin_hora > b_ini:
+            return "Bloqueado"
 
-def generar_franjas():
-    """Genera franjas de 2 horas entre 10:00 y 18:00."""
-    horas = []
-    inicio = time(10, 0)
-    fin = time(18, 0)
+    # Verificar superposición con reservas (de 2 horas)
+    for r in reservas:
+        r_ini = int(r.hora_inicio.split(":")[0])
+        r_fin = int(r.hora_fin.split(":")[0])
+        if inicio_hora < r_fin and fin_hora > r_ini:
+            return "Reservado"
 
-    actual = datetime.combine(date.today(), inicio)
-
-    while actual.time() < fin:
-        siguiente = actual + timedelta(hours=2)
-        horas.append((
-            actual.time().strftime("%H:%M"),
-            siguiente.time().strftime("%H:%M")
-        ))
-        actual = siguiente
-
-    return horas
-
-
-# -----------------------------------------------------------
-# DISPONIBILIDAD DE UNA FECHA (RESERVAS + BLOQUEOS)
-# -----------------------------------------------------------
+    return "Disponible"
 
 @router.get("/{fecha}")
-def disponibilidad_por_fecha(fecha: str, db: Session = Depends(get_db)):
+def disponibilidad_por_fecha(fecha: str, rol: str = "student", db: Session = Depends(get_db)):
     """
-    Retorna todas las franjas horarias de un día
-    con su estado: disponible / reservado / bloqueado
+    rol='student': devuelve franjas de 2h (10-12, 11-13...)
+    rol='admin': devuelve franjas de 1h (10-11, 11-12...)
     """
-
-    # Validar fecha
     try:
         fecha_dt = datetime.strptime(fecha, "%Y-%m-%d").date()
     except:
-        raise HTTPException(400, "Formato de fecha inválido. Use YYYY-MM-DD")
+        raise HTTPException(400, "Formato inválido. Use YYYY-MM-DD")
 
-    # Obtener reservas del día
+    # Cargar datos del día
     reservas = db.query(Reserva).filter(
         Reserva.fecha == fecha_dt,
         Reserva.estado == "reservado"
     ).all()
-
-    # Obtener bloqueos del día
-    bloqueos = db.query(Bloqueo).filter(
-        Bloqueo.fecha == fecha_dt
-    ).all()
-
-    # Revisar si el día completo está bloqueado
+    
+    bloqueos = db.query(Bloqueo).filter(Bloqueo.fecha == fecha_dt).all()
     dia_bloqueado = any(b.tipo == "dia" for b in bloqueos)
+    bloqueos_franja = [b for b in bloqueos if b.tipo == "franja"]
 
-    franjas = generar_franjas()
     respuesta = []
+    apertura = 10
+    cierre = 18
 
-    for inicio, fin in franjas:
-        estado = "disponible"
-
-        # 1️⃣ SI TODO EL DÍA ESTÁ BLOQUEADO
-        if dia_bloqueado:
-            estado = "bloqueado"
-
-        # 2️⃣ VERIFICAR BLOQUEO DE FRANJA
-        for b in bloqueos:
-            if b.tipo == "franja" and b.hora_inicio == inicio:
-                estado = "bloqueado"
-
-        # 3️⃣ VERIFICAR SI LA FRANJA ESTÁ RESERVADA
-        for r in reservas:
-            if r.hora_inicio == inicio:
-                estado = "reservado"
-
-        # registrar estado final
-        respuesta.append({
-            "inicio": inicio,
-            "fin": fin,
-            "estado": estado
-        })
+    if rol == "admin":
+        # ADMIN: Franjas de 1 hora (10:00 - 18:00)
+        for h in range(apertura, cierre):
+            inicio = h
+            fin = h + 1
+            estado = verificar_estado_rango(inicio, fin, reservas, bloqueos_franja, dia_bloqueado)
+            respuesta.append({
+                "inicio": f"{inicio:02d}:00",
+                "fin": f"{fin:02d}:00",
+                "estado": estado
+            })
+    else:
+        # ESTUDIANTE: Franjas de 2 horas deslizantes
+        # Último inicio posible es 16:00 (para terminar 18:00)
+        for h in range(apertura, cierre - 1):
+            inicio = h
+            fin = h + 2
+            estado = verificar_estado_rango(inicio, fin, reservas, bloqueos_franja, dia_bloqueado)
+            respuesta.append({
+                "inicio": f"{inicio:02d}:00",
+                "fin": f"{fin:02d}:00",
+                "estado": estado
+            })
 
     return respuesta

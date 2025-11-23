@@ -1,106 +1,48 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from datetime import datetime, date
+from datetime import datetime
 
 from backend.database import get_db
 from backend.models.reserva import Reserva
 from backend.models.bloqueo import Bloqueo
 
-router = APIRouter(prefix="/admin", tags=["Administrador"])
-
-
-# -----------------------------------------------------------
-# UTILIDADES
-# -----------------------------------------------------------
-
-def validar_franja(hora: str):
-    return hora in ["10:00", "12:00", "14:00", "16:00"]
-
-
-def fin_franja(hora: str):
-    h = int(hora.split(":")[0])
-    return f"{h+2}:00"
-
-
-# -----------------------------------------------------------
-# 1️⃣ BLOQUEAR DÍA COMPLETO
-# -----------------------------------------------------------
-
-@router.post("/bloquear_dia")
-def bloquear_dia(fecha: str, db: Session = Depends(get_db)):
-
-    try:
-        fecha_dt = datetime.strptime(fecha, "%Y-%m-%d").date()
-    except:
-        raise HTTPException(400, "Fecha inválida. Use YYYY-MM-DD")
-
-    # Verificar si hay reservas
-    reservas = db.query(Reserva).filter(
-        Reserva.fecha == fecha_dt,
-        Reserva.estado == "reservado"
-    ).all()
-
-    if reservas:
-        raise HTTPException(400, "No se puede bloquear un día con reservas activas.")
-
-    # Verificar si ya está bloqueado
-    existing = db.query(Bloqueo).filter(
-        Bloqueo.fecha == fecha_dt,
-        Bloqueo.tipo == "dia"
-    ).first()
-
-    if existing:
-        raise HTTPException(400, "El día ya está bloqueado.")
-
-    bloqueo = Bloqueo(
-        fecha=fecha_dt,
-        hora_inicio=None,
-        hora_fin=None,
-        tipo="dia"
-    )
-
-    db.add(bloqueo)
-    db.commit()
-    db.refresh(bloqueo)
-
-    return {"msg": "Día bloqueado correctamente", "id": bloqueo.id}
-
-
-# -----------------------------------------------------------
-# 2️⃣ BLOQUEAR UNA FRANJA HORARIA
-# -----------------------------------------------------------
+router = APIRouter(prefix="/admin", tags=["Admin"])
 
 @router.post("/bloquear_franja")
 def bloquear_franja(fecha: str, hora_inicio: str, db: Session = Depends(get_db)):
-    
     try:
         fecha_dt = datetime.strptime(fecha, "%Y-%m-%d").date()
     except:
-        raise HTTPException(400, "Fecha inválida. Use YYYY-MM-DD")
+        raise HTTPException(400, "Fecha inválida")
 
-    if not validar_franja(hora_inicio):
-        raise HTTPException(400, "Franja inválida. Debe ser 10:00, 12:00, 14:00 o 16:00")
+    # Admin bloquea de 1 en 1 hora
+    ini_bloq = int(hora_inicio.split(":")[0])
+    fin_bloq = ini_bloq + 1
+    hora_fin = f"{fin_bloq:02d}:00"
 
-    hora_fin = fin_franja(hora_inicio)
-
-    # Verificar que no esté reservada
-    reserva = db.query(Reserva).filter(
-        Reserva.fecha == fecha_dt,
-        Reserva.hora_inicio == hora_inicio,
+    # Validar superposición con RESERVAS existentes (que duran 2h)
+    reservas = db.query(Reserva).filter(
+        Reserva.fecha == fecha_dt, 
         Reserva.estado == "reservado"
-    ).first()
+    ).all()
 
-    if reserva:
-        raise HTTPException(400, "No se puede bloquear una franja reservada.")
+    for r in reservas:
+        r_ini = int(r.hora_inicio.split(":")[0])
+        r_fin = int(r.hora_fin.split(":")[0])
+        
+        # Si el bloqueo de 1h cae dentro de una reserva de 2h
+        if ini_bloq < r_fin and fin_bloq > r_ini:
+            raise HTTPException(400, "No se puede bloquear: existe una reserva en este horario.")
 
-    # Verificar si ya está bloqueada
-    bloqueo = db.query(Bloqueo).filter(
+    # Validar si ya está bloqueado
+    existente = db.query(Bloqueo).filter(
         Bloqueo.fecha == fecha_dt,
-        Bloqueo.hora_inicio == hora_inicio
+        Bloqueo.hora_inicio == hora_inicio,
+        Bloqueo.tipo == "franja"
     ).first()
-
-    if bloqueo:
-        raise HTTPException(400, "La franja ya está bloqueada.")
+    
+    if existente:
+        raise HTTPException(400, "Esta franja ya está bloqueada.")
 
     nuevo = Bloqueo(
         fecha=fecha_dt,
@@ -108,41 +50,28 @@ def bloquear_franja(fecha: str, hora_inicio: str, db: Session = Depends(get_db))
         hora_fin=hora_fin,
         tipo="franja"
     )
-
     db.add(nuevo)
     db.commit()
-    db.refresh(nuevo)
+    
+    return {"msg": "Franja bloqueada correctamente"}
 
-    return {"msg": "Franja bloqueada correctamente", "id": nuevo.id}
-
-
-# -----------------------------------------------------------
-# 3️⃣ VER BLOQUEOS DE UN DÍA
-# -----------------------------------------------------------
-
-@router.get("/bloqueos/{fecha}")
-def obtener_bloqueos(fecha: str, db: Session = Depends(get_db)):
+@router.post("/bloquear_dia")
+def bloquear_dia(fecha: str, db: Session = Depends(get_db)):
     try:
         fecha_dt = datetime.strptime(fecha, "%Y-%m-%d").date()
     except:
-        raise HTTPException(400, "Fecha inválida.")
+        raise HTTPException(400, "Fecha inválida")
 
-    bloqueos = db.query(Bloqueo).filter(Bloqueo.fecha == fecha_dt).all()
-    return bloqueos
+    # Solo si no hay reservas activas
+    reservas = db.query(Reserva).filter(
+        Reserva.fecha == fecha_dt,
+        Reserva.estado == "reservado"
+    ).first()
+    
+    if reservas:
+        raise HTTPException(400, "No se puede bloquear el día: hay reservas activas.")
 
-
-# -----------------------------------------------------------
-# 4️⃣ DESBLOQUEAR BLOQUEO
-# -----------------------------------------------------------
-
-@router.delete("/desbloquear/{bloqueo_id}")
-def desbloquear(bloqueo_id: int, db: Session = Depends(get_db)):
-    bloqueo = db.query(Bloqueo).filter(Bloqueo.id == bloqueo_id).first()
-    if not bloqueo:
-        raise HTTPException(404, "Bloqueo no encontrado")
-
-    db.delete(bloqueo)
+    bloqueo = Bloqueo(fecha=fecha_dt, tipo="dia")
+    db.add(bloqueo)
     db.commit()
-
-    return {"msg": "Bloqueo eliminado correctamente"}
-# admin router
+    return {"msg": "Día bloqueado exitosamente"}

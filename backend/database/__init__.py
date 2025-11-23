@@ -1,16 +1,19 @@
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.pool import NullPool  # 👈 NUEVO
 
-# Ruta absoluta: garantiza que reservas.db siempre quede dentro de backend/database/
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASE_URL = f"sqlite:///{os.path.join(BASE_DIR, 'reservas.db')}"
+# Cadena de conexión para MySQL
+SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://root:admin123@localhost:3306/reservas_fisi"
 
 engine = create_engine(
-    DATABASE_URL, connect_args={"check_same_thread": False}
+    SQLALCHEMY_DATABASE_URL,
+    pool_pre_ping=True,
+    pool_recycle=3600,
+    poolclass=NullPool  # 👈 MEJORA: Evita problemas de conexión en desarrollo
 )
 
-SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
