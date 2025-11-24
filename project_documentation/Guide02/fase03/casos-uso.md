@@ -120,4 +120,3 @@
 | El caso de uso finaliza.                                                                                                                      |
 
 ## Diagrama de casos de uso
-![diagrama_casos_de_uso.png](diagrama_casos_de_uso.png)
