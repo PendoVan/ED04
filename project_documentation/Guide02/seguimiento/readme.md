@@ -176,9 +176,9 @@ El seguimiento del **Sistema de Reservas de Canchas FISI** se realizó mediante 
 
 ## Métricas del Proyecto
 
-- **Total de requisitos identificados:** 11
-- **Requisitos mandatorios implementados:** 9
-- **Requisitos pospuestos:** 2
+- **Total de requisitos identificados:** 10
+- **Requisitos mandatorios implementados:** 7
+- **Requisitos pospuestos:** 3
 - **Total de casos de prueba ejecutados:** 19
 - **Pruebas exitosas:** 18
 - **Pruebas pendientes:** 1
@@ -191,3 +191,4 @@ El seguimiento del **Sistema de Reservas de Canchas FISI** se realizó mediante 
 ## Conclusión
 
 El proyecto se completó exitosamente dentro del plazo establecido. Se implementaron todas las funcionalidades mandatorias del MVP y se corrigieron todos los errores detectados durante la fase de pruebas. La metodología de seguimiento semanal permitió identificar y resolver bloqueos técnicos de manera oportuna, garantizando la calidad del producto final.
+
