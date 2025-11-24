@@ -161,6 +161,30 @@ Interfaz web construida con HTML, CSS y JavaScript Vanilla. Se comunica con el b
 
 ---
 
+## Diagrama de Flujo de Módulos
+```
+Usuario (Estudiante/Admin)
+         ↓
+    Frontend (HTML/JS)
+         ↓
+    API REST (FastAPI)
+         ↓
+┌────────┴────────┐
+│    Routers      │
+├─────────────────┤
+│ • auth          │
+│ • reservas      │
+│ • disponibilidad│
+│ • admin         │
+└────────┬────────┘
+         ↓
+    Models (SQLAlchemy)
+         ↓
+    Base de Datos (MySQL)
+```
+
+---
+
 ## Conclusión
 
 El sistema está organizado en una arquitectura en capas, donde cada módulo tiene una responsabilidad específica. Esto facilita el mantenimiento, la escalabilidad y la trazabilidad de requisitos.
