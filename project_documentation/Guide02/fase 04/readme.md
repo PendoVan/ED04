@@ -2,7 +2,7 @@
 
 - [Módulos](modulos.md)
 - [Código fuente](codigo-fuente.md)
-- [Clases generadas (Opcional)](clases-generadas.md)
+- [Clases generadas](clases-generadas.md)
 - [Pantallas de interfaz de usuario](pantallas-usuario.md)
 
 
