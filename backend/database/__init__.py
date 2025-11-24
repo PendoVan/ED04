@@ -1,20 +1,31 @@
+# backend/database/__init__.py
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
-from sqlalchemy.pool import NullPool  # 👈 NUEVO
 
-# Cadena de conexión para MySQL
-SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://root:admin123@localhost:3306/reservas_fisi"
+# Usar variable de entorno si existe (útil en producción / tests)
+SQLALCHEMY_DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "mysql+mysqlconnector://root:admin123@localhost:3306/reservas_fisi"
+)
 
+# Opciones del engine
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
     pool_pre_ping=True,
     pool_recycle=3600,
-    poolclass=NullPool  # 👈 MEJORA: Evita problemas de conexión en desarrollo
+    # poolclass=NullPool  # comente/active según necesidad
 )
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# Probar conexión al iniciar (fallará rápido con mensaje claro)
+try:
+    with engine.connect() as conn:
+        pass
+except Exception as e:
+    # Lanzar error claro para que se vea al iniciar la app
+    raise RuntimeError(f"Error conectando a la base de datos: {e}")
 
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 def get_db():

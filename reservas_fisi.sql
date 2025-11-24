@@ -1,11 +1,11 @@
+-- Crear base de datos si no existe
+CREATE DATABASE IF NOT EXISTS reservas_fisi;
+
 USE reservas_fisi;
 
--- Las tablas se crean automáticamente, pero puedes agregar datos iniciales:
+-- Insertar datos iniciales
 INSERT IGNORE INTO usuarios (correo, password_hash, rol) VALUES
-('adminfisi@unmsm.edu.pe', 'FISI2024', 'admin');
-
--- Insertar usuarios de prueba para desarrollo
-INSERT IGNORE INTO usuarios (correo, password_hash, rol) VALUES
+('adminfisi@unmsm.edu.pe', 'FISI2024', 'admin'),
 ('alumno1@unmsm.edu.pe', 'EXTERNA', 'student'),
 ('alumno2@unmsm.edu.pe', 'EXTERNA', 'student'),
 ('docente1@unmsm.edu.pe', 'EXTERNA', 'student');

@@ -1,15 +1,19 @@
+# backend/main.py
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from backend.database import Base, engine
 
-# Modelos
+# Modelos (asegurar que estén importados para create_all)
 from backend.models.user import Usuario
 from backend.models.reserva import Reserva
 from backend.models.bloqueo import Bloqueo
 
-# Routers
-from backend.routers import auth, reservas, disponibilidad, admin
+# Routers (import explícito)
+from backend.routers.auth import router as auth_router
+from backend.routers.reservas import router as reservas_router
+from backend.routers.disponibilidad import router as disponibilidad_router
+from backend.routers.admin import router as admin_router
 
 # Crear tablas
 Base.metadata.create_all(bind=engine)
@@ -20,12 +24,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS mejorado
 origins = [
     "http://localhost",
     "http://localhost:5500",
     "http://127.0.0.1:5500",
-    "http://localhost:3000",  # 👈 NUEVO: Para React/Next.js
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
@@ -36,7 +39,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Manejo global de excepciones
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
     return JSONResponse(
@@ -44,11 +46,10 @@ async def global_exception_handler(request: Request, exc: Exception):
         content={"detail": "Error interno del servidor"}
     )
 
-# Include routers
-app.include_router(auth.router)
-app.include_router(reservas.router)
-app.include_router(disponibilidad.router)
-app.include_router(admin.router)
+app.include_router(auth_router)
+app.include_router(reservas_router)
+app.include_router(disponibilidad_router)
+app.include_router(admin_router)
 
 @app.get("/")
 def root():
@@ -56,4 +57,11 @@ def root():
 
 @app.get("/health")
 def health_check():
-    return {"status": "healthy", "database": "connected"}
+    # Intentar conectar brevemente para comprobar DB
+    try:
+        with engine.connect() as conn:
+            pass
+        db_status = "connected"
+    except Exception:
+        db_status = "disconnected"
+    return {"status": "healthy", "database": db_status}
