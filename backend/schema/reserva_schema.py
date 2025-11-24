@@ -34,7 +34,7 @@ class CrearReservaRequest(BaseModel):
             raise ValueError('Formato de hora inválido. Use HH:00 (ej: 10:00)')
 
     class Config:
-        schema_extra = {
+        "json_schema_extra" == {
             "example": {
                 "usuario_id": 1,
                 "fecha": "2024-12-15",
@@ -55,4 +55,4 @@ class ReservaResponse(BaseModel):
     estado: str
 
     class Config:
-        orm_mode = True
+        "from_attributes" == True

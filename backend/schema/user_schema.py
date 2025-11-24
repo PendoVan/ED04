@@ -22,4 +22,4 @@ class LoginResponse(BaseModel):
     fecha_creacion: Optional[datetime] = None
 
     class Config:
-        orm_mode = True
+        "from_attributes" == True

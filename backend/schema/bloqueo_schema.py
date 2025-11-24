@@ -46,7 +46,7 @@ class BloqueoResponse(BaseModel):
     tipo: str
 
     class Config:
-        orm_mode = True
+        "from_attributes" == True
 
 class BloqueoListResponse(BaseModel):
     dia_bloqueado: bool
