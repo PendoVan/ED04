@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Reservas - Reservas FISI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <h3>Reservas FISI</h3>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="reservas.html" class="btn"
+                    style="color: var(--text-primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>←</span> Volver
+                </a>
+                <button onclick="logout()" class="btn btn-primary">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Mis Reservas Activas</h2>
+        <div id="lista"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+            <!-- Las reservas se cargarán aquí -->
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/mis_reservas.js"></script>
+    <script>
+        function logout() {
+            localStorage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+
+</html>

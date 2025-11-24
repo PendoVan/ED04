@@ -3,82 +3,80 @@ from sqlalchemy.orm import Session
 
 from backend.database import get_db
 from backend.models.user import Usuario
-from backend.schema.user_schema import LoginRequest, LoginResponse
+from backend.schema.user_schema import RegisterRequest, LoginRequest, LoginResponse
 
 router = APIRouter(prefix="/auth", tags=["Autenticación"])
 
-# DATOS DEL ADMIN
+# Credenciales fijas del admin
 ADMIN_CORREO = "adminfisi@unmsm.edu.pe"
 ADMIN_PASSWORD = "FISI2024"
 
 
+# ---------------------------
+# REGISTRO DE ESTUDIANTE
+# ---------------------------
+@router.post("/registro")
+def registro_usuario(data: RegisterRequest, db: Session = Depends(get_db)):
+    correo = data.correo.lower()
+
+    if not correo.endswith("@unmsm.edu.pe"):
+        raise HTTPException(400, "El correo debe ser institucional (@unmsm.edu.pe).")
+
+    existente = db.query(Usuario).filter(Usuario.correo == correo).first()
+    if existente:
+        raise HTTPException(400, "Este correo ya está registrado.")
+
+    nuevo = Usuario(
+        correo=correo,
+        password_hash=data.password,  # texto plano solo para prototipo
+        rol="student"
+    )
+    db.add(nuevo)
+    db.commit()
+    db.refresh(nuevo)
+
+    return {
+        "msg": "Usuario registrado correctamente",
+        "id": nuevo.id,
+        "correo": nuevo.correo,
+        "rol": nuevo.rol,
+    }
+
+
+# ---------------------------
+# LOGIN (ADMIN + ESTUDIANTE)
+# ---------------------------
 @router.post("/login", response_model=LoginResponse)
 def login(data: LoginRequest, db: Session = Depends(get_db)):
     correo = data.correo.lower()
-    password = data.password
 
-    # ------------------------------
-    # LOGIN ADMINISTRADOR
-    # ------------------------------
+    # ADMIN
     if correo == ADMIN_CORREO:
-        if password != ADMIN_PASSWORD:
+        if data.password != ADMIN_PASSWORD:
             raise HTTPException(400, "Contraseña incorrecta para administrador.")
 
         admin = db.query(Usuario).filter(Usuario.correo == correo).first()
-
         if not admin:
             admin = Usuario(
                 correo=correo,
-                password_hash=password,  # SIN HASH
+                password_hash=ADMIN_PASSWORD,
                 rol="admin"
             )
             db.add(admin)
             db.commit()
             db.refresh(admin)
 
-        return LoginResponse(
-            id=admin.id,
-            correo=admin.correo,
-            rol=admin.rol
-        )
+        return LoginResponse(id=admin.id, correo=admin.correo, rol=admin.rol)
 
-    # ------------------------------
-    # LOGIN ESTUDIANTE
-    # ------------------------------
+    # ESTUDIANTE
     if not correo.endswith("@unmsm.edu.pe"):
         raise HTTPException(400, "El correo debe ser institucional.")
 
     user = db.query(Usuario).filter(Usuario.correo == correo).first()
-
-    # SI NO EXISTE → REGISTRO AUTOMÁTICO
     if not user:
-        # CONTRASEÑA FIJA SIMPLE
-        provisional = "12345678"
+        raise HTTPException(400, "Usuario no registrado. Primero debe registrarse.")
 
-        if password != provisional:
-            raise HTTPException(400, "Contraseña incorrecta para registro provisional.")
-
-        user = Usuario(
-            correo=correo,
-            password_hash=provisional,  # SIN HASH
-            rol="student"
-        )
-        db.add(user)
-        db.commit()
-        db.refresh(user)
-
-        return LoginResponse(
-            id=user.id,
-            correo=user.correo,
-            rol=user.rol
-        )
-
-    # SI EXISTE → COMPARACIÓN DIRECTA
-    if password != user.password_hash:
+    if data.password != user.password_hash:
         raise HTTPException(400, "Contraseña incorrecta.")
 
-    return LoginResponse(
-        id=user.id,
-        correo=user.correo,
-        rol=user.rol
-    )
+    return LoginResponse(id=user.id, correo=user.correo, rol=user.rol)

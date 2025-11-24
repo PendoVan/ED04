@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Reservas FISI</title>
+</head>
+<body>
+    <h1>Bienvenido al Sistema de Reservas FISI</h1>
+    <p id="info"></p>
+
+    <button id="logout">Cerrar Sesión</button>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem("usuario"));
+
+        if (!data) {
+            window.location.href = "login.html";
+        }
+
+        document.getElementById("info").innerText =
+            `Usuario: ${data.correo} | Rol: ${data.rol}`;
+
+        document.getElementById("logout").onclick = () => {
+            localStorage.removeItem("usuario");
+            window.location.href = "login.html";
+        };
+    </script>
+</body>
+</html>

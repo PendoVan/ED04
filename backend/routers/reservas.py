@@ -5,6 +5,7 @@ from datetime import datetime, date, timedelta
 from backend.database import get_db
 from backend.models.reserva import Reserva
 from backend.models.user import Usuario
+from backend.schema.reserva_schema import ReservaCreate
 
 router = APIRouter(prefix="/reservas", tags=["Reservas"])
 
@@ -14,9 +15,12 @@ router = APIRouter(prefix="/reservas", tags=["Reservas"])
 # -------------------------------------------------------
 
 def rango_franja_valido(hora_inicio: str):
-    """Valida que la franja esté dentro de las franjas permitidas."""
-    franjas_validas = ["10:00", "12:00", "14:00", "16:00"]
-    return hora_inicio in franjas_validas
+    """Valida que la franja esté dentro de las franjas permitidas (10:00 a 16:00)."""
+    try:
+        h = int(hora_inicio.split(":")[0])
+        return 10 <= h <= 16 and hora_inicio.endswith(":00")
+    except:
+        return False
 
 
 def siguiente_hora(hora: str):
@@ -34,7 +38,11 @@ def semana(fecha: date):
 # -------------------------------------------------------
 
 @router.post("/crear")
-def crear_reserva(usuario_id: int, fecha: str, hora_inicio: str, db: Session = Depends(get_db)):
+def crear_reserva(data: ReservaCreate, db: Session = Depends(get_db)):
+    usuario_id = data.usuario_id
+    fecha = data.fecha
+    hora_inicio = data.hora_inicio
+
     # Validar usuario
     usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
     if not usuario:
@@ -58,7 +66,7 @@ def crear_reserva(usuario_id: int, fecha: str, hora_inicio: str, db: Session = D
 
     # Validar franja válida
     if not rango_franja_valido(hora_inicio):
-        raise HTTPException(400, "La franja debe ser 10:00, 12:00, 14:00 o 16:00")
+        raise HTTPException(400, "La franja debe ser una hora en punto entre 10:00 y 16:00")
 
     hora_fin = siguiente_hora(hora_inicio)
 
@@ -69,19 +77,30 @@ def crear_reserva(usuario_id: int, fecha: str, hora_inicio: str, db: Session = D
         if inicio_int < hora_actual:
             raise HTTPException(400, "No puede reservar horas que ya pasaron.")
 
-    # Validar que no exista ya una reserva en esa franja
-    conflicto = db.query(Reserva).filter(
+    # Validar que no exista ya una reserva en esa franja (SOLAPAMIENTO)
+    # Conflicto si: (StartA < EndB) and (StartB < EndA)
+    
+    # Obtener todas las reservas activas del día
+    reservas_dia = db.query(Reserva).filter(
         Reserva.fecha == fecha_dt,
-        Reserva.hora_inicio == hora_inicio
-    ).first()
+        Reserva.estado != "cancelado"
+    ).all()
 
-    if conflicto:
-        raise HTTPException(400, "Esa franja ya está reservada.")
+    h_ini_nueva = int(hora_inicio.split(":")[0])
+    h_fin_nueva = int(hora_fin.split(":")[0])
+
+    for r in reservas_dia:
+        h_ini_exist = int(r.hora_inicio.split(":")[0])
+        h_fin_exist = int(r.hora_fin.split(":")[0])
+
+        if h_ini_nueva < h_fin_exist and h_ini_exist < h_fin_nueva:
+            raise HTTPException(400, "Esa franja choca con una reserva existente.")
 
     # Validar máximo 2 reservas por semana
     semana_usuario = semana(fecha_dt)
     reservas_semana = db.query(Reserva).filter(
-        Reserva.usuario_id == usuario_id
+        Reserva.usuario_id == usuario_id,
+        Reserva.estado == "reservado" # Solo contar activas
     ).all()
 
     count = 0
@@ -147,4 +166,3 @@ def cancelar_reserva(reserva_id: int, db: Session = Depends(get_db)):
     db.commit()
 
     return {"msg": "Reserva cancelada correctamente"}
-

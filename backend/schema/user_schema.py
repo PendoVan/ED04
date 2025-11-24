@@ -1,7 +1,11 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
+
+class RegisterRequest(BaseModel):
+    correo: str
+    password: str
 
 class LoginRequest(BaseModel):
-    correo: EmailStr
+    correo: str
     password: str
 
 class LoginResponse(BaseModel):
@@ -10,4 +14,4 @@ class LoginResponse(BaseModel):
     rol: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True

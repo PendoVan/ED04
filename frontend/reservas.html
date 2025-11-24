@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cancha - Reservas FISI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <h3>Reservas FISI</h3>
+            <div style="display: flex; gap: 1rem;">
+                <a href="mis_reservas.html" class="btn" style="color: var(--text-primary); text-decoration: none;">Mis
+                    Reservas</a>
+                <button onclick="logout()" class="btn btn-primary">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="center-screen" style="min-height: auto; margin-top: 2rem;">
+            <div class="card" style="width: 100%; max-width: 500px;">
+                <h2 class="text-center">Nueva Reserva</h2>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" onchange="cargarDisponibilidad()">
+                </div>
+
+                <div class="form-group">
+                    <label for="horarios">Horario Disponible</label>
+                    <select id="horarios">
+                        <option value="" disabled selected>Seleccione una fecha primero</option>
+                    </select>
+                </div>
+
+                <button onclick="reservar()" class="btn btn-primary btn-full mt-4">Confirmar Reserva</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/reserva.js"></script>
+    <script>
+        function logout() {
+            localStorage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+
+</html>

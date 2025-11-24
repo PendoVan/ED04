@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Administrador - Reservas FISI</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+
+    <h1>Panel del Administrador</h1>
+
+    <section>
+        <h2>Consultar disponibilidad</h2>
+        <input type="date" id="fecha_disp" class="cal">
+        <button onclick="consultarDisponibilidad()">Consultar</button>
+
+        <div class="cards">
+            <div class="card" id="card-disponibles">Disponibles: 0</div>
+            <div class="card" id="card-reservados">Reservados: 0</div>
+            <div class="card" id="card-bloqueados">Bloqueados: 0</div>
+        </div>
+
+        <table id="tabla_disp">
+            <thead>
+                <tr>
+                    <th>Inicio</th>
+                    <th>Fin</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Bloquear día completo</h2>
+        <input type="date" id="fecha_bloqueo_dia" class="cal">
+        <button onclick="bloquearDia()">Bloquear día</button>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Bloquear franja horaria</h2>
+        <input type="date" id="fecha_bloqueo_franja" class="cal">
+
+        <select id="hora_inicio">
+            <option value="10:00">10:00</option>
+            <option value="12:00">12:00</option>
+            <option value="14:00">14:00</option>
+            <option value="16:00">16:00</option>
+        </select>
+
+        <button onclick="bloquearFranja()">Bloquear franja</button>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Bloqueos del día</h2>
+        <input type="date" id="fecha_ver_bloqueos" class="cal">
+        <button onclick="verBloqueos()">Ver bloqueos</button>
+
+        <ul id="lista_bloqueos"></ul>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+    window.onload = function() {
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (!user || user.rol !== "admin") {
+            alert("Acceso denegado. Solo administradores.");
+            window.location.href = "login.html";
+        }
+    }
+    </script>
+
+</body>
+</html>
