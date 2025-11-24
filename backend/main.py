@@ -3,13 +3,9 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from backend.database import Base, engine
-
-# Modelos (asegurar que estén importados para create_all)
 from backend.models.user import Usuario
 from backend.models.reserva import Reserva
 from backend.models.bloqueo import Bloqueo
-
-# Routers (import explícito)
 from backend.routers.auth import router as auth_router
 from backend.routers.reservas import router as reservas_router
 from backend.routers.disponibilidad import router as disponibilidad_router

@@ -5,7 +5,7 @@ from datetime import datetime
 from backend.database import get_db
 from backend.models.reserva import Reserva
 from backend.models.bloqueo import Bloqueo
-from backend.schema.bloqueo_schema import (  # AGREGAR IMPORT
+from backend.schema.bloqueo_schema import (  
     BloqueoFranjaRequest, 
     BloqueoDiaRequest,
     BloqueoResponse
@@ -13,7 +13,7 @@ from backend.schema.bloqueo_schema import (  # AGREGAR IMPORT
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 
-@router.post("/bloquear_franja", response_model=BloqueoResponse)  # USAR SCHEMA
+@router.post("/bloquear_franja", response_model=BloqueoResponse) 
 def bloquear_franja(bloqueo_data: BloqueoFranjaRequest, db: Session = Depends(get_db)):
     try:
         fecha_dt = datetime.strptime(bloqueo_data.fecha, "%Y-%m-%d").date()

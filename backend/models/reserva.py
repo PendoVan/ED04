@@ -7,11 +7,11 @@ class Reserva(Base):
     __tablename__ = "reservas"
 
     id = Column(Integer, primary_key=True, index=True)
-    usuario_id = Column(Integer, ForeignKey("usuarios.id", ondelete="CASCADE"), nullable=False)  # 👈 MEJORA
+    usuario_id = Column(Integer, ForeignKey("usuarios.id", ondelete="CASCADE"), nullable=False) 
     fecha = Column(Date, index=True, nullable=False)
     hora_inicio = Column(String(10), nullable=False)
     hora_fin = Column(String(10), nullable=False)
     estado = Column(String(20), default="reservado", nullable=False)
-    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())  # 👈 NUEVO
+    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
 
     usuario = relationship("Usuario", back_populates="reservas")

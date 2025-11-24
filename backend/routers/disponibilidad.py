@@ -17,15 +17,12 @@ def verificar_estado_rango(inicio_hora: int, fin_hora: int, reservas, bloqueos, 
     if dia_bloqueado:
         return "Bloqueado"
 
-    # Verificar superposición con bloqueos (de 1 hora)
     for b in bloqueos:
         b_ini = int(b.hora_inicio.split(":")[0])
         b_fin = int(b.hora_fin.split(":")[0])
-        # Si hay overlap
         if inicio_hora < b_fin and fin_hora > b_ini:
             return "Bloqueado"
 
-    # Verificar superposición con reservas (de 2 horas)
     for r in reservas:
         r_ini = int(r.hora_inicio.split(":")[0])
         r_fin = int(r.hora_fin.split(":")[0])

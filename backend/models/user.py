@@ -10,6 +10,6 @@ class Usuario(Base):
     correo = Column(String(100), unique=True, index=True, nullable=False)
     password_hash = Column(String(100), nullable=False)
     rol = Column(String(20), nullable=False, default="student")
-    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())  # 👈 NUEVO
+    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())  
 
-    reservas = relationship("Reserva", back_populates="usuario", cascade="all, delete-orphan")  # 👈 MEJORA
+    reservas = relationship("Reserva", back_populates="usuario", cascade="all, delete-orphan")  

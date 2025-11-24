@@ -6,19 +6,14 @@ from backend.schema.user_schema import LoginRequest, LoginResponse
 
 router = APIRouter(prefix="/auth", tags=["Autenticación"])
 
-# Simulación de API Institucional - MEJORADA
 def validar_credenciales_institucion(correo: str, password: str) -> bool:
     """
     Valida credenciales contra sistema institucional
     """
-    # Lógica simulada mejorada
     if not correo.endswith("@unmsm.edu.pe"):
         return False
     if not password or len(password.strip()) == 0:
         return False
-    # Simulamos diferentes casos de prueba
-    if "error" in password.lower():
-        return False  # Simula credenciales incorrectas
     return True
 
 @router.post("/login", response_model=LoginResponse)

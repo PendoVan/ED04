@@ -7,7 +7,7 @@ class Bloqueo(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     fecha = Column(Date, index=True, nullable=False)
-    hora_inicio = Column(String(10), default=None)  # 👈 MEJORA: más claro
+    hora_inicio = Column(String(10), default=None)
     hora_fin = Column(String(10), default=None)
     tipo = Column(String(20), nullable=False)  # "dia" o "franja"
-    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())  # 👈 NUEVO
+    fecha_creacion = Column(DateTime(timezone=True), server_default=func.now())
